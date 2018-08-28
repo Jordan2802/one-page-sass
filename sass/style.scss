@@ -2,6 +2,7 @@
 $icons-layout: smart; // Ici, on indique à compass qu'on veut qu'il crée l'image contenant toutes nos images en disposant les éléments de la manière la plus efficace possible. On stocke ça dans une variable globale reconnue par compass appelée $icons-layout.
 @import "icons/*.png"; // "dossier" correspond au dossier que tu as créé à l'étape 2.
 @include all-icons-sprites(true); // Enfin, la fonction all-icons-sprites, avec comme premier paramètre "true", qui indique à la fonction qu'on veut également que Compass s'occupe des background-position tout seul.
+
 *{
   margin:0;
   padding:0;
@@ -355,5 +356,27 @@ animation-direction: alternate;
 }
 #volet:target a.fermer {
 	display: block;
+}
+
+// Same as above but with a #ccc at the halfway point
+.ex {
+  width: 48%;
+  margin: auto;
+  @include clearfix;
+  p {
+    padding-top: 10px;
+  }
+}
+
+.gradient-example {
+  width: 80px;
+  height: 80px;
+  background: red;
+  float: left;
+  margin: 1em 1em 0 0;
+}
+// This will yield a radial gradient with an apparent specular highlight
+#radial-gradient {
+  @include background-image(radial-gradient(45px 45px, cyan 10px, dodgerblue 30px));
 }
 @import 'partials/footer';

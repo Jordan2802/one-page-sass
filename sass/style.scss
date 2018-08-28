@@ -3,9 +3,9 @@ $icons-layout: smart; // Ici, on indique à compass qu'on veut qu'il crée l'ima
 @import "icons/*.png"; // "dossier" correspond au dossier que tu as créé à l'étape 2.
 @include all-icons-sprites(true); // Enfin, la fonction all-icons-sprites, avec comme premier paramètre "true", qui indique à la fonction qu'on veut également que Compass s'occupe des background-position tout seul.
 
-*{
-  margin:0;
-  padding:0;
+* {
+  margin: 0;
+  padding: 0;
 }
 $fontFamily: 'Trebuchet MS', sans-serif;
 $fontSize: 62.5%;
@@ -16,42 +16,35 @@ $h2: 2.5rem;
 $h3: 1.8rem;
 $p: 1.6rem;
 @import "compass/css3";
+@import "compass/utilities"; //@mixin
 
-@import "compass/utilities";
-//@mixin
 %nav {
   background: linear-gradient(deepskyblue, dodgerblue);
   width: 100%;
-  display:flex;
+  display: flex;
   justify-content: center;
   border-radius: 3px;
   text-shadow: 0 1px 0 rgba(255, 255, 255, .4);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, .7) inset,
-                0 -1px 0 hsl(210, 100%, 32%) inset,
-                0 -2px 0 hsl(210, 100%, 38%) inset,
-                0 -3px 0 hsl(210, 100%, 44%) inset,
-                0 -4px 0 hsl(210, 100%, 50%) inset,
-                0 -5px 0 hsl(210, 100%, 60%) inset;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .7) inset, 0 -1px 0 hsl(210, 100%, 32%) inset, 0 -2px 0 hsl(210, 100%, 38%) inset, 0 -3px 0 hsl(210, 100%, 44%) inset, 0 -4px 0 hsl(210, 100%, 50%) inset, 0 -5px 0 hsl(210, 100%, 60%) inset;
 }
-
-@mixin nav2(){
+@mixin nav2() {
   display: flex;
   flex-wrap: wrap;
 }
-html{
+
+html {
   font-size: $fontSize;
   font-family: $fontFamily;
 }
-body{
-  background-image: url(../img/fondopa.png);
+
+body {
+  background-image: url("../img/fondopa.png");
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size: cover;
   background-attachment: fixed;
   font-family: $fontFamily;
-
 }
-@import 'partials/header';
-//animation h1
+@import 'partials/header'; //animation h1
 
 .ml3 {
   font-weight: 900;
@@ -59,107 +52,119 @@ body{
   margin-bottom: 20px;
   color: $colorNav;
 }
-@import 'partials/nav';
-
-/*Container\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+@import 'partials/nav'; /*Container\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 ///////////////////////////////////////////////////////////////////////////////*/
-h2{
+
+h2 {
   margin-top: 10px;
   margin-bottom: 40px;
   font-size: $h2;
 }
-h3{
+
+h3 {
   font-size: $h3;
   font-weight: bolder;
 }
 
-.fa-image, .fa-portrait, .fa-clipboard, .fa-fast-forward{
-  color:  black;
+.fa-clipboard,
+.fa-fast-forward,
+.fa-image,
+.fa-portrait {
+  color: black;
   width: 50px;
   height: 50px;
-  margin:0;
-  vertical-align:sub;
+  margin: 0;
+  vertical-align: sub;
 }
-
 
 .container {
   margin: auto;
-  p{
-  font-size: $p;
-  margin-bottom: 40px;
+
+  p {
+    font-size: $p;
+    margin-bottom: 40px;
+  }
 }
-}
-.st1, .st3{
+
+.st1,
+.st3 {
   max-width: 980px;
   margin: auto;
 }
-.st4{
+
+.st4 {
   margin: auto;
   width: 100%;
 }
-.st2 h2, .st2 p, .st4 h2{
+
+.st2 h2,
+.st2 p,
+.st4 h2 {
   max-width: 980px;
-  margin:auto;
-  margin-bottom: 20px;
+  margin: auto auto 20px;
 }
-h2{
+
+h2 {
   margin-top: 15px;
 }
 /*partie 1////////////////////////////////////////////////////////////////////*/
-.image{
+
+.image {
   display: flex;
   flex-wrap: wrap;
- img {
-	position: relative;
-	top: 0;
-  box-shadow: 6px 6px 6px black;
-	transition: all 0.3s ease-in;
+
+  img {
+    position: relative;
+    top: 0;
+    box-shadow: 6px 6px 6px black;
+    transition: all 0.3s ease-in;
+  }
 }
-}
+
 .image img:hover {
-top: -35px;
-border-radius: 50%;
-box-shadow: 10px 10px 35px grey;
+  top: -35px;
+  border-radius: 50%;
+  box-shadow: 10px 10px 35px grey;
 }
 
-
-
-.img{
+.img {
   margin-right: 12px;
 }
 /*partie 2///////////////////////////////////////////////////////////////////*/
-iframe{
-  width:100%;
+
+iframe {
+  width: 100%;
   margin-top: 20px;
 }
-
 /*partie 3///////////////////////////////////////////////////////////////////*/
-
-.imgform{
+.imgform {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-form{
+form {
   display: flex;
   flex-direction: column;
   width: 480px;
   height: 500px;
   margin-left: 50px;
 }
-input::placeholder, textarea::placeholder{
+
+input::placeholder,
+textarea::placeholder {
   color: rgba(0,0,0,0.8);
   font-size: $p;
   font-weight: bold;
 }
-input{
+
+input {
   height: 55px;
   margin-bottom: 15px;
   font-size: $p;
 }
 
-textarea{
+textarea {
   margin-bottom: 15px;
   height: 165px;
   font-size: $p;
@@ -168,25 +173,23 @@ textarea{
   font-family: 'Trebuchet MS', sans-serif;
 }
 
-.button{
+.button {
   height: 55px;
   width: 160px;
   margin: auto;
   border-radius: 25px 25px 25px 25px;
   background: linear-gradient(deepskyblue, dodgerblue);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, .7) inset,
-                0 -1px 0 hsl(210, 100%, 32%) inset,
-                0 -2px 0 hsl(210, 100%, 38%) inset,
-                0 -3px 0 hsl(210, 100%, 44%) inset,
-                0 -4px 0 hsl(210, 100%, 50%) inset,
-                0 -5px 0 hsl(210, 100%, 60%) inset;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .7) inset, 0 -1px 0 hsl(210, 100%, 32%) inset, 0 -2px 0 hsl(210, 100%, 38%) inset, 0 -3px 0 hsl(210, 100%, 44%) inset, 0 -4px 0 hsl(210, 100%, 50%) inset, 0 -5px 0 hsl(210, 100%, 60%) inset;
   color: white;
   font-size: $p;
   font-weight: bolder;
   outline: none;
+  cursor: pointer;
 }
 
-.icone1,.icone2,.icone3{
+.icone1,
+.icone2,
+.icone3 {
   border: 1px solid #242323;
   width: 450px;
   height: 55px;
@@ -194,11 +197,12 @@ textarea{
   margin-bottom: 5px;
 }
 
-.icone2,.icone3{
+.icone2,
+.icone3 {
   margin-top: 5px;
 }
 
-.icone4{
+.icone4 {
   border: 1px solid #242323;
   width: 450px;
   height: 140px;
@@ -206,177 +210,183 @@ textarea{
   margin-top: 5px;
 }
 
-.text,.mail,.tel{
-  border:0;
+.mail,
+.tel,
+.text {
+  border: 0;
   width: 405px;
   outline: none;
   background-color: inherit;
 }
 
-.area{
-  border:0;
+.area {
+  border: 0;
   width: 405px;
   margin-top: 5px;
   height: 130px;
   background-color: inherit;
   outline: none;
 }
-.fa-comment{
+
+.fa-comment {
   top: -125px;
   position: relative;
 }
-.fa-user,.fa-envelope,.fa-comment{
+
+.fa-comment,
+.fa-envelope,
+.fa-user {
   padding: 10px;
   font-size: 15px;
 }
-.fa-mobile-alt{
+
+.fa-mobile-alt {
   padding: 15px;
   font-size: 15px;
 }
 /*images animés\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
 #cf2 {
-  position:relative;
-  height:380px;
-  width:450px;
-  margin:0 auto;
+  position: relative;
+  height: 380px;
+  width: 450px;
+  margin: 0 auto;
 }
+
 #cf2 img {
-  position:absolute;
-  left:0;
+  position: absolute;
+  left: 0;
   -webkit-transition: opacity 1.5s ease-in-out;
   -moz-transition: opacity 1.5s ease-in-out;
   -o-transition: opacity 1.5s ease-in-out;
   transition: opacity 1.5s ease-in-out;
 }
 @media screen and (max-width:980px) {
- #cf2{
+  #cf2 {
     max-width: 100%;
     height: calc(85vw);
   }
-  form{
-  width: 100%;
+
+  form {
+    width: 100%;
   }
-.titre{
-  width: 100%;
-  padding: 0;
-}
-  nav{
-  @include nav2();
+
+  .titre {
+    width: 100%;
+    padding: 0;
+  }
+
+  nav {
+    @include nav2();
   }
 }
-@media  screen and (max-width:480px) {
-  #cf2{
+@media screen and (max-width:480px) {
+  #cf2 {
     width: 100%;
     height: calc(85vw);
   }
-  form{
+
+  form {
     max-width: 100%;
   }
-.titre{
-  width: 100%;
-  padding: 0;
-}
-  nav{
-  @include nav2();
+
+  .titre {
+    width: 100%;
+    padding: 0;
+  }
+
+  nav {
+    @include nav2();
   }
 }
-#cf2 img.transparent {
-opacity:0;
-}
 
-@keyframes chgt_image{
-0% {
-opacity:1;
+#cf2 img.transparent {
+  opacity: 0;
 }
-45% {
-opacity:1;
-}
-55% {
-opacity:0;
-}
-100% {
-opacity:0;
-}
+@keyframes chgt_image {
+  0% {
+    opacity: 1;
+  }
+
+  45% {
+    opacity: 1;
+  }
+
+  55% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 #cf2 img.top {
-animation-name: chgt_image;
-animation-timing-function: ease-in-out;
-animation-iteration-count: infinite;
-animation-duration: 6s;
-animation-direction: alternate;
+  animation-name: chgt_image;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 6s;
+  animation-direction: alternate;
 }
 /*partie 4////////////////////////////////////////////////////////////////////*/
+
 #volet {
-	width: 250px;
-	padding: 5px;
-	background: linear-gradient(deepskyblue, dodgerblue);
+  width: 250px;
+  padding: 5px;
+  background: linear-gradient(deepskyblue, dodgerblue);
   color: #fff;
   position: relative;
   border: 2px solid white;
-	left: -270px; top: 55px;
-  -webkit-transition: all .5s ease-in;
-	transition: all .5s ease-in;
+  left: -270px;
+  top: 55px;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
 }
 
 #volet:target {
-	left: 0;
+  left: 0;
 }
 
-#volet a.ouvrir, #volet a.fermer {
+#volet a.fermer,
+#volet a.ouvrir {
   padding: 10px 15px;
   font-size: 2.2rem;
-	background: #555;
+  background: #555;
   border-left: 2px solid white;
   border-right: 2px solid white;
   border-bottom: 2px solid white;
-
-	color: #fff;
-	text-decoration: none;
+  color: #fff;
+  text-decoration: none;
   position: absolute;
-	right: -88px;
-	top: 50px;
-
-	/* quelques styles CSS3 */
-	-ms-transform: rotate(270deg);
-	-moz-transform: rotate(270deg);
-	-webkit-transform: rotate(270deg);
-	transform: rotate(270deg);
-
-	border-radius: 0 0 8px 8px;
+  right: -88px;
+  top: 50px;
+  /* quelques styles CSS3 */
+  -ms-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg);
+  border-radius: 0 0 8px 8px;
 }
+
 #volet a.fermer {
-	display: none;
+  display: none;
 }
+
 #volet_clos:target #volet {
-	left: -270px;
+  left: -270px;
 }
+
 #volet:target a.ouvrir {
-	display: none;
+  display: none;
 }
+
 #volet:target a.fermer {
-	display: block;
-}
-
-// Same as above but with a #ccc at the halfway point
-.ex {
-  width: 48%;
-  margin: auto;
-  @include clearfix;
-  p {
-    padding-top: 10px;
-  }
-}
-
-.gradient-example {
-  width: 80px;
-  height: 80px;
-  background: red;
-  float: left;
-  margin: 1em 1em 0 0;
+  display: block;
 }
 // This will yield a radial gradient with an apparent specular highlight
-#radial-gradient {
+
+#send {
   @include background-image(radial-gradient(45px 45px, cyan 10px, dodgerblue 30px));
+  @include opacity(0.8);
 }
 @import 'partials/footer';

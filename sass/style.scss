@@ -1,4 +1,4 @@
-
+//sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp
 $icons-layout: smart; // Ici, on indique à compass qu'on veut qu'il crée l'image contenant toutes nos images en disposant les éléments de la manière la plus efficace possible. On stocke ça dans une variable globale reconnue par compass appelée $icons-layout.
 @import "icons/*.png"; // "dossier" correspond au dossier que tu as créé à l'étape 2.
 @include all-icons-sprites(true); // Enfin, la fonction all-icons-sprites, avec comme premier paramètre "true", qui indique à la fonction qu'on veut également que Compass s'occupe des background-position tout seul.

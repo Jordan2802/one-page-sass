@@ -1,21 +1,56 @@
-//sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp
+/*All\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
 *{
-  margin:0;
-  padding:0;
+  margin: 0px;
 }
-$fontFamily: 'Trebuchet MS', sans-serif;
-$fontSize: 62.5%;
-$colorNav: white;
-$color2: black;
-$fontTitle: 3.6rem;
-$h2: 2.5rem;
-$h3: 1.8rem;
-$p: 1.6rem;
-@import "compass/css3";
+html{
+  font-size: 62.5%;
+}
+body{
+  height: 100%;
+  font-family: 'Trebuchet MS', sans-serif;
+  background-image: url(../img/fondopa.png);
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-attachment: fixed;
+}
 
-@import "compass/utilities";
-//@mixin
-%nav {
+/*Header\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+header{
+  width: 100%;
+  background-image: url(../img/fond.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-attachment: fixed;
+  height: 300px;
+  text-align: center;
+}
+/*animation h1////////////////////////////////////////////////////////////*/
+.ml3 {
+  font-weight: 900;
+  font-size: 6rem;
+  margin-bottom: 20px;
+}
+
+/*nav//////////////////////////////////////////////////////////////////////////*/
+.titre{
+  height: 200px;
+  padding-top:100px;
+}
+.titre p{
+  font-size: 3.6rem;
+  color: white;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+nav p:first-child a{
+  border-radius: 3px 0 0 3px;
+}
+nav p:last-child a{
+  border-radius: 0 3px 3px 0;
+}
+nav{
   background: linear-gradient(deepskyblue, dodgerblue);
   width: 100%;
   display:flex;
@@ -29,43 +64,78 @@ $p: 1.6rem;
                 0 -4px 0 hsl(210, 100%, 50%) inset,
                 0 -5px 0 hsl(210, 100%, 60%) inset;
 }
+nav p:nth-child(1){
+  border-left: 2px solid white;
+  border-right: 1px solid white;
+}
+nav p:nth-child(2){
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+nav p:nth-child(3){
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+nav p:nth-child(4){
+  text-align: center;
+  border-left: 1px solid white;
+  border-right: 2px solid white;
+}
 
-@mixin nav2(){
-  display: flex;
-  flex-wrap: wrap;
+nav.fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  opacity: 0.7;
+  z-index:1000;
 }
-html{
-  font-size: $fontSize;
-  font-family: $fontFamily;
+/*animation padding///////////////////////////////////////////////////////////*/
+nav p{
+  height: 40px;
+  display: block;
+  padding: 8px 8px 17px 8px;
+  font-size: 2.2rem;
+  color: rgba(0, 0, 0, .7);
+  transition: all .3s .1s;
+  position: relative;
 }
-body{
-  background-image: url(../img/fondopa.png);
-  background-repeat: no-repeat;
-  background-size:cover;
-  background-attachment: fixed;
-  font-family: $fontFamily;
 
+nav p:hover{
+  background-color:  #2d96f3;
+  box-shadow: 2px 3px 10px  #2d51f3 inset;
+  color: white;
+  padding: 8px 40px 17px 40px;
+  transition: all .3s 0s;
 }
-@import 'partials/header';
-//animation h1
-
-.ml3 {
-  font-weight: 900;
-  font-size: 6rem;
-  margin-bottom: 20px;
-  color: $colorNav;
+/*rond lumineux///////////////////////////////////////////////////////////////*/
+nav p::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 9px;
+    margin-left: -2px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, .5);
 }
-@import 'partials/nav';
+nav p:hover::before{
+    background: white;
+    box-shadow: 0 0 2px white,
+                0 -1px 0 rgba(0, 0, 0, .4);
+}
 
 /*Container\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 ///////////////////////////////////////////////////////////////////////////////*/
 h2{
   margin-top: 10px;
   margin-bottom: 40px;
-  font-size: $h2;
+  font-size: 3.6rem;
 }
 h3{
-  font-size: $h3;
+  font-size: 1.8rem;
   font-weight: bolder;
 }
 
@@ -77,13 +147,12 @@ h3{
   vertical-align:sub;
 }
 
-
-.container {
+.container{
   margin: auto;
-  p{
-  font-size: $p;
-  margin-bottom: 40px;
 }
+.container p{
+  font-size: 1.6rem;
+  margin-bottom: 40px;
 }
 .st1, .st3{
   max-width: 980px;
@@ -102,23 +171,23 @@ h2{
   margin-top: 15px;
 }
 /*partie 1////////////////////////////////////////////////////////////////////*/
-.image{
-  display: flex;
-  flex-wrap: wrap;
- img {
+.image img {
 	position: relative;
 	top: 0;
   box-shadow: 6px 6px 6px black;
 	transition: all 0.3s ease-in;
 }
-}
+
 .image img:hover {
 top: -35px;
 border-radius: 50%;
 box-shadow: 10px 10px 35px grey;
 }
 
-
+.image{
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .img{
   margin-right: 12px;
@@ -146,19 +215,19 @@ form{
 }
 input::placeholder, textarea::placeholder{
   color: rgba(0,0,0,0.8);
-  font-size: $p;
+  font-size: 1.6rem;
   font-weight: bold;
 }
 input{
   height: 55px;
   margin-bottom: 15px;
-  font-size: $p;
+  font-size: 1.6rem;
 }
 
 textarea{
   margin-bottom: 15px;
   height: 165px;
-  font-size: $p;
+  font-size: 1.6rem;
   resize: none;
   overflow: auto;
   font-family: 'Trebuchet MS', sans-serif;
@@ -177,7 +246,7 @@ textarea{
                 0 -4px 0 hsl(210, 100%, 50%) inset,
                 0 -5px 0 hsl(210, 100%, 60%) inset;
   color: white;
-  font-size: $p;
+  font-size: 1.6rem;
   font-weight: bolder;
   outline: none;
 }
@@ -257,7 +326,8 @@ textarea{
   padding: 0;
 }
   nav{
-  @include nav2();
+  display: flex;
+  flex-wrap: wrap;
   }
 }
 @media  screen and (max-width:480px) {
@@ -273,7 +343,8 @@ textarea{
   padding: 0;
 }
   nav{
-  @include nav2();
+  display: flex;
+  flex-wrap: wrap;
   }
 }
 #cf2 img.transparent {
@@ -302,6 +373,7 @@ animation-iteration-count: infinite;
 animation-duration: 6s;
 animation-direction: alternate;
 }
+
 /*partie 4////////////////////////////////////////////////////////////////////*/
 #volet {
 	width: 250px;
@@ -353,4 +425,20 @@ animation-direction: alternate;
 #volet:target a.fermer {
 	display: block;
 }
-@import 'partials/footer';
+/*Footer\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+footer{
+  width: 100%;
+  height: 150px;
+  position: absolute;
+  background-color: #2d96f3;
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 0;
+}
+span{
+  color: white;
+  font-size: 4.5rem;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 50px;
+}

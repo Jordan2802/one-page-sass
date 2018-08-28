@@ -1,230 +1,283 @@
-/*All\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
-*{
-  margin: 0px;
-}
-html{
-  font-size: 62.5%;
-}
-body{
-  height: 100%;
-  font-family: 'Trebuchet MS', sans-serif;
-  background-image: url(../img/fondopa.png);
-  background-repeat: no-repeat;
-  background-size:cover;
-  background-attachment: fixed;
+@charset "UTF-8";
+/* line 2, ../sass/style.scss */
+* {
+  margin: 0;
+  padding: 0;
 }
 
-/*Header\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
-header{
+/* line 18, ../sass/style.scss */
+nav {
+  background: linear-gradient(#00bfff, #1e90ff);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-radius: 3px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.7) inset, 0 -1px 0 #0052a3 inset, 0 -2px 0 #0061c2 inset, 0 -3px 0 #0070e0 inset, 0 -4px 0 #0080ff inset, 0 -5px 0 #3399ff inset;
+}
+
+/* line 37, ../sass/style.scss */
+html {
+  font-size: 62.5%;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+/* line 41, ../sass/style.scss */
+body {
+  background-image: url(../img/fondopa.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+/* line 3, ../sass/partials/_header.scss */
+header {
   width: 100%;
   background-image: url(../img/fond.jpg);
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size: cover;
   background-attachment: fixed;
   height: 300px;
   text-align: center;
 }
-/*animation h1////////////////////////////////////////////////////////////*/
+
+/* line 52, ../sass/style.scss */
 .ml3 {
   font-weight: 900;
   font-size: 6rem;
   margin-bottom: 20px;
+  color: white;
 }
 
-/*nav//////////////////////////////////////////////////////////////////////////*/
-.titre{
+/* line 4, ../sass/partials/_nav.scss */
+.titre {
   height: 200px;
-  padding-top:100px;
+  padding-top: 100px;
 }
-.titre p{
+
+/* line 8, ../sass/partials/_nav.scss */
+.titre p {
   font-size: 3.6rem;
   color: white;
 }
-a{
+
+/* line 12, ../sass/partials/_nav.scss */
+a {
   text-decoration: none;
   color: inherit;
 }
-nav p:first-child a{
+
+/* line 16, ../sass/partials/_nav.scss */
+nav p:first-child a {
   border-radius: 3px 0 0 3px;
 }
-nav p:last-child a{
+
+/* line 19, ../sass/partials/_nav.scss */
+nav p:last-child a {
   border-radius: 0 3px 3px 0;
 }
-nav{
-  background: linear-gradient(deepskyblue, dodgerblue);
-  width: 100%;
-  display:flex;
-  justify-content: center;
-  border-radius: 3px;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, .4);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, .7) inset,
-                0 -1px 0 hsl(210, 100%, 32%) inset,
-                0 -2px 0 hsl(210, 100%, 38%) inset,
-                0 -3px 0 hsl(210, 100%, 44%) inset,
-                0 -4px 0 hsl(210, 100%, 50%) inset,
-                0 -5px 0 hsl(210, 100%, 60%) inset;
-}
-nav p:nth-child(1){
-  border-left: 2px solid white;
-  border-right: 1px solid white;
-}
-nav p:nth-child(2){
+
+/* line 29, ../sass/partials/_nav.scss */
+nav p:nth-child(1) {
   border-left: 1px solid white;
   border-right: 1px solid white;
-}
-nav p:nth-child(3){
-  border-left: 1px solid white;
-  border-right: 1px solid white;
-}
-nav p:nth-child(4){
-  text-align: center;
-  border-left: 1px solid white;
-  border-right: 2px solid white;
 }
 
-nav.fixed{
+/* line 29, ../sass/partials/_nav.scss */
+nav p:nth-child(2) {
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+
+/* line 29, ../sass/partials/_nav.scss */
+nav p:nth-child(3) {
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+
+/* line 29, ../sass/partials/_nav.scss */
+nav p:nth-child(4) {
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+
+/* line 36, ../sass/partials/_nav.scss */
+nav.fixed {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   width: 100%;
   opacity: 0.7;
-  z-index:1000;
+  z-index: 1000;
 }
-/*animation padding///////////////////////////////////////////////////////////*/
-nav p{
+
+/* line 47, ../sass/partials/_nav.scss */
+nav p {
   height: 40px;
   display: block;
   padding: 8px 8px 17px 8px;
   font-size: 2.2rem;
-  color: rgba(0, 0, 0, .7);
+  color: rgba(0, 0, 0, 0.7);
   transition: all .3s .1s;
   position: relative;
 }
 
-nav p:hover{
-  background-color:  #2d96f3;
+/* line 57, ../sass/partials/_nav.scss */
+nav p:hover {
+  background-color: #2d96f3;
   box-shadow: 2px 3px 10px  #2d51f3 inset;
   color: white;
   padding: 8px 40px 17px 40px;
   transition: all .3s 0s;
 }
-/*rond lumineux///////////////////////////////////////////////////////////////*/
-nav p::before{
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: 9px;
-    margin-left: -2px;
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    background: rgba(0, 0, 0, .5);
-}
-nav p:hover::before{
-    background: white;
-    box-shadow: 0 0 2px white,
-                0 -1px 0 rgba(0, 0, 0, .4);
+
+/* line 66, ../sass/partials/_nav.scss */
+nav p::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 9px;
+  margin-left: -2px;
+  width: 4px;
+  height: 4px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  background: rgba(0, 0, 0, 0.5);
 }
 
-/*Container\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+/* line 82, ../sass/partials/_nav.scss */
+nav p:hover::before {
+  background: white;
+  box-shadow: 0 0 2px white, 0 -1px 0 rgba(0, 0, 0, 0.4);
+}
+
+/*Container\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 ///////////////////////////////////////////////////////////////////////////////*/
-h2{
+/* line 62, ../sass/style.scss */
+h2 {
   margin-top: 10px;
   margin-bottom: 40px;
-  font-size: 3.6rem;
+  font-size: 2.5rem;
 }
-h3{
+
+/* line 67, ../sass/style.scss */
+h3 {
   font-size: 1.8rem;
   font-weight: bolder;
 }
 
-.fa-image, .fa-portrait, .fa-clipboard, .fa-fast-forward{
-  color:  black;
+/* line 72, ../sass/style.scss */
+.fa-image, .fa-portrait, .fa-clipboard, .fa-fast-forward {
+  color: black;
   width: 50px;
   height: 50px;
-  margin:0;
-  vertical-align:sub;
+  margin: 0;
+  vertical-align: sub;
 }
 
-.container{
+/* line 81, ../sass/style.scss */
+.container {
   margin: auto;
 }
-.container p{
+/* line 83, ../sass/style.scss */
+.container p {
   font-size: 1.6rem;
   margin-bottom: 40px;
 }
-.st1, .st3{
+
+/* line 88, ../sass/style.scss */
+.st1, .st3 {
   max-width: 980px;
   margin: auto;
 }
-.st4{
+
+/* line 92, ../sass/style.scss */
+.st4 {
   margin: auto;
   width: 100%;
 }
-.st2 h2, .st2 p, .st4 h2{
+
+/* line 96, ../sass/style.scss */
+.st2 h2, .st2 p, .st4 h2 {
   max-width: 980px;
-  margin:auto;
+  margin: auto;
   margin-bottom: 20px;
 }
-h2{
+
+/* line 101, ../sass/style.scss */
+h2 {
   margin-top: 15px;
 }
+
 /*partie 1////////////////////////////////////////////////////////////////////*/
-.image img {
-	position: relative;
-	top: 0;
-  box-shadow: 6px 6px 6px black;
-	transition: all 0.3s ease-in;
-}
-
-.image img:hover {
-top: -35px;
-border-radius: 50%;
-box-shadow: 10px 10px 35px grey;
-}
-
-.image{
+/* line 105, ../sass/style.scss */
+.image {
   display: flex;
   flex-wrap: wrap;
 }
+/* line 108, ../sass/style.scss */
+.image img {
+  position: relative;
+  top: 0;
+  box-shadow: 6px 6px 6px black;
+  transition: all 0.3s ease-in;
+}
 
-.img{
+/* line 115, ../sass/style.scss */
+.image img:hover {
+  top: -35px;
+  border-radius: 50%;
+  box-shadow: 10px 10px 35px grey;
+}
+
+/* line 123, ../sass/style.scss */
+.img {
   margin-right: 12px;
 }
+
 /*partie 2///////////////////////////////////////////////////////////////////*/
-iframe{
-  width:100%;
+/* line 127, ../sass/style.scss */
+iframe {
+  width: 100%;
   margin-top: 20px;
 }
 
 /*partie 3///////////////////////////////////////////////////////////////////*/
-
-.imgform{
+/* line 134, ../sass/style.scss */
+.imgform {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-form{
+/* line 140, ../sass/style.scss */
+form {
   display: flex;
   flex-direction: column;
   width: 480px;
   height: 500px;
   margin-left: 50px;
 }
-input::placeholder, textarea::placeholder{
-  color: rgba(0,0,0,0.8);
+
+/* line 147, ../sass/style.scss */
+input::placeholder, textarea::placeholder {
+  color: rgba(0, 0, 0, 0.8);
   font-size: 1.6rem;
   font-weight: bold;
 }
-input{
+
+/* line 152, ../sass/style.scss */
+input {
   height: 55px;
   margin-bottom: 15px;
   font-size: 1.6rem;
 }
 
-textarea{
+/* line 158, ../sass/style.scss */
+textarea {
   margin-bottom: 15px;
   height: 165px;
   font-size: 1.6rem;
@@ -233,25 +286,22 @@ textarea{
   font-family: 'Trebuchet MS', sans-serif;
 }
 
-.button{
+/* line 167, ../sass/style.scss */
+.button {
   height: 55px;
   width: 160px;
   margin: auto;
   border-radius: 25px 25px 25px 25px;
-  background: linear-gradient(deepskyblue, dodgerblue);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, .7) inset,
-                0 -1px 0 hsl(210, 100%, 32%) inset,
-                0 -2px 0 hsl(210, 100%, 38%) inset,
-                0 -3px 0 hsl(210, 100%, 44%) inset,
-                0 -4px 0 hsl(210, 100%, 50%) inset,
-                0 -5px 0 hsl(210, 100%, 60%) inset;
+  background: linear-gradient(#00bfff, #1e90ff);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.7) inset, 0 -1px 0 #0052a3 inset, 0 -2px 0 #0061c2 inset, 0 -3px 0 #0070e0 inset, 0 -4px 0 #0080ff inset, 0 -5px 0 #3399ff inset;
   color: white;
   font-size: 1.6rem;
   font-weight: bolder;
   outline: none;
 }
 
-.icone1,.icone2,.icone3{
+/* line 185, ../sass/style.scss */
+.icone1, .icone2, .icone3 {
   border: 1px solid #242323;
   width: 450px;
   height: 55px;
@@ -259,11 +309,13 @@ textarea{
   margin-bottom: 5px;
 }
 
-.icone2,.icone3{
+/* line 193, ../sass/style.scss */
+.icone2, .icone3 {
   margin-top: 5px;
 }
 
-.icone4{
+/* line 197, ../sass/style.scss */
+.icone4 {
   border: 1px solid #242323;
   width: 450px;
   height: 140px;
@@ -271,162 +323,201 @@ textarea{
   margin-top: 5px;
 }
 
-.text,.mail,.tel{
-  border:0;
+/* line 205, ../sass/style.scss */
+.text, .mail, .tel {
+  border: 0;
   width: 405px;
   outline: none;
   background-color: inherit;
 }
 
-.area{
-  border:0;
+/* line 212, ../sass/style.scss */
+.area {
+  border: 0;
   width: 405px;
   margin-top: 5px;
   height: 130px;
   background-color: inherit;
   outline: none;
 }
-.fa-comment{
+
+/* line 220, ../sass/style.scss */
+.fa-comment {
   top: -125px;
   position: relative;
 }
-.fa-user,.fa-envelope,.fa-comment{
+
+/* line 224, ../sass/style.scss */
+.fa-user, .fa-envelope, .fa-comment {
   padding: 10px;
   font-size: 15px;
 }
-.fa-mobile-alt{
+
+/* line 228, ../sass/style.scss */
+.fa-mobile-alt {
   padding: 15px;
   font-size: 15px;
 }
-/*images animés\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+/*images anim├®s\\\\\\\\\\\\\\\\\\\\\\\\\*/
+/* line 233, ../sass/style.scss */
 #cf2 {
-  position:relative;
-  height:380px;
-  width:450px;
-  margin:0 auto;
+  position: relative;
+  height: 380px;
+  width: 450px;
+  margin: 0 auto;
 }
+
+/* line 239, ../sass/style.scss */
 #cf2 img {
-  position:absolute;
-  left:0;
+  position: absolute;
+  left: 0;
   -webkit-transition: opacity 1.5s ease-in-out;
   -moz-transition: opacity 1.5s ease-in-out;
   -o-transition: opacity 1.5s ease-in-out;
   transition: opacity 1.5s ease-in-out;
 }
-@media screen and (max-width:980px) {
- #cf2{
+
+@media screen and (max-width: 980px) {
+  /* line 248, ../sass/style.scss */
+  #cf2 {
     max-width: 100%;
     height: calc(85vw);
   }
-  form{
-  width: 100%;
+
+  /* line 252, ../sass/style.scss */
+  form {
+    width: 100%;
   }
-.titre{
-  width: 100%;
-  padding: 0;
-}
-  nav{
-  display: flex;
-  flex-wrap: wrap;
+
+  /* line 255, ../sass/style.scss */
+  .titre {
+    width: 100%;
+    padding: 0;
+  }
+
+  /* line 259, ../sass/style.scss */
+  nav {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
-@media  screen and (max-width:480px) {
-  #cf2{
+@media screen and (max-width: 480px) {
+  /* line 264, ../sass/style.scss */
+  #cf2 {
     width: 100%;
     height: calc(85vw);
   }
-  form{
+
+  /* line 268, ../sass/style.scss */
+  form {
     max-width: 100%;
   }
-.titre{
-  width: 100%;
-  padding: 0;
-}
-  nav{
-  display: flex;
-  flex-wrap: wrap;
+
+  /* line 271, ../sass/style.scss */
+  .titre {
+    width: 100%;
+    padding: 0;
+  }
+
+  /* line 275, ../sass/style.scss */
+  nav {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
+/* line 279, ../sass/style.scss */
 #cf2 img.transparent {
-opacity:0;
+  opacity: 0;
 }
 
-@keyframes chgt_image{
-0% {
-opacity:1;
+@keyframes chgt_image {
+  0% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
-45% {
-opacity:1;
-}
-55% {
-opacity:0;
-}
-100% {
-opacity:0;
-}
-}
-
+/* line 298, ../sass/style.scss */
 #cf2 img.top {
-animation-name: chgt_image;
-animation-timing-function: ease-in-out;
-animation-iteration-count: infinite;
-animation-duration: 6s;
-animation-direction: alternate;
+  animation-name: chgt_image;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 6s;
+  animation-direction: alternate;
 }
 
 /*partie 4////////////////////////////////////////////////////////////////////*/
+/* line 306, ../sass/style.scss */
 #volet {
-	width: 250px;
-	padding: 5px;
-	background: linear-gradient(deepskyblue, dodgerblue);
+  width: 250px;
+  padding: 5px;
+  background: linear-gradient(#00bfff, #1e90ff);
   color: #fff;
   position: relative;
   border: 2px solid white;
-	left: -270px; top: 55px;
+  left: -270px;
+  top: 55px;
   -webkit-transition: all .5s ease-in;
-	transition: all .5s ease-in;
+  transition: all .5s ease-in;
 }
 
+/* line 318, ../sass/style.scss */
 #volet:target {
-	left: 0;
+  left: 0;
 }
 
+/* line 322, ../sass/style.scss */
 #volet a.ouvrir, #volet a.fermer {
   padding: 10px 15px;
   font-size: 2.2rem;
-	background: #555;
+  background: #555;
   border-left: 2px solid white;
   border-right: 2px solid white;
   border-bottom: 2px solid white;
-
-	color: #fff;
-	text-decoration: none;
+  color: #fff;
+  text-decoration: none;
   position: absolute;
-	right: -88px;
-	top: 50px;
-
-	/* quelques styles CSS3 */
-	-ms-transform: rotate(270deg);
-	-moz-transform: rotate(270deg);
-	-webkit-transform: rotate(270deg);
-	transform: rotate(270deg);
-
-	border-radius: 0 0 8px 8px;
+  right: -88px;
+  top: 50px;
+  /* quelques styles CSS3 */
+  -ms-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg);
+  border-radius: 0 0 8px 8px;
 }
+
+/* line 344, ../sass/style.scss */
 #volet a.fermer {
-	display: none;
+  display: none;
 }
+
+/* line 347, ../sass/style.scss */
 #volet_clos:target #volet {
-	left: -270px;
+  left: -270px;
 }
+
+/* line 350, ../sass/style.scss */
 #volet:target a.ouvrir {
-	display: none;
+  display: none;
 }
+
+/* line 353, ../sass/style.scss */
 #volet:target a.fermer {
-	display: block;
+  display: block;
 }
-/*Footer\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
-footer{
+
+/*Footer\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+/* line 2, ../sass/partials/_footer.scss */
+footer {
   width: 100%;
   height: 150px;
   position: absolute;
@@ -435,7 +526,9 @@ footer{
   margin-top: 80px;
   margin-bottom: 0;
 }
-span{
+
+/* line 11, ../sass/partials/_footer.scss */
+span {
   color: white;
   font-size: 4.5rem;
   margin-left: 15px;

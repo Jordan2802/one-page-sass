@@ -1,0 +1,86 @@
+//sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp
+
+//Nav
+.titre{
+  height: 200px;
+  padding-top:100px;
+}
+.titre p{
+  font-size: $fontTitle;
+  color: $colorNav;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+nav p:first-child a{
+  border-radius: 3px 0 0 3px;
+}
+nav p:last-child a{
+  border-radius: 0 3px 3px 0;
+}
+
+
+nav{
+  @extend %nav;
+}
+
+@for $i from 1 through 4{
+  nav p:nth-child( #{$i}){
+    border-left: 1px solid $colorNav;
+    border-right: 1px solid $colorNav;
+  }
+}
+
+
+nav.fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  opacity: 0.7;
+  z-index:1000;
+}
+//animation padding
+
+nav p{
+  height: 40px;
+  display: block;
+  padding: 8px 8px 17px 8px;
+  font-size: 2.2rem;
+  color: rgba(0, 0, 0, .7);
+  transition: all .3s .1s;
+  position: relative;
+}
+
+nav p:hover{
+  background-color:  #2d96f3;
+  box-shadow: 2px 3px 10px  #2d51f3 inset;
+  color: $colorNav;
+  padding: 8px 40px 17px 40px;
+  transition: all .3s 0s;
+}
+
+//rond lumineux
+nav p::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 9px;
+    margin-left: -2px;
+    width: 4px;
+    height: 4px;
+    @include border-radius(50px);
+    background: rgba(0, 0, 0, .5);
+}
+
+
+
+
+
+nav p:hover::before{
+    background: $colorNav;
+    box-shadow: 0 0 2px white,
+                0 -1px 0 rgba(0, 0, 0, .4);
+}
